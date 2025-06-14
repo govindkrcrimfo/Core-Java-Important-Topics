@@ -17,7 +17,6 @@ public class ExceptionDemo {
         catch(Exception e){ // if above catch block is not executed then this will be executed
            System.out.println(" Exception caught");
         }
-
         System.out.println("Reached at last line of Code ");
     }
      
