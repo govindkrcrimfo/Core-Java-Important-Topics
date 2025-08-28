@@ -1,11 +1,21 @@
 package exceptionHandling;
 
-class Example {
+class NextExample {
     public int divide(int a, int b) throws ArithmeticException {
+        System.out.println("Next Example Method ");
         int k = a / b;
+
         return k;
     }
+}
 
+class Example {
+    NextExample n = new NextExample();
+
+    public int divide(int a, int b) {
+        System.out.println("Example method");
+        return n.divide(a, b);
+    }
 }
 
 public class ExcetpionDemo3 {
