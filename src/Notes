@@ -1,0 +1,10 @@
+# multiple lines of message during commit 
+ 1. git commit   ->  press enter
+
+Executing git commit without the -m flag will open your default text editor (often Vim or Nano) where you can write your commit message.
+
+In Vim:
+1. Press i to enter insert mode.
+2. Type your multi-line commit message.
+3. Press Esc to exit insert mode.
+4. Type :wq and press Enter to save and quit, completing the commit.
