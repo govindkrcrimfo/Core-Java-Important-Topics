@@ -5,7 +5,37 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.w3c.dom.ls.LSInput;
+class Empolyee {
+    String name;
+    int age;
+
+    public Empolyee(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Empolyee [name=" + name + ", age=" + age + "]";
+    }
+
+}
 
 public class Ex3 {
 
@@ -33,6 +63,17 @@ public class Ex3 {
                 System.out.println(k.getValue());
             }
         }
+        // seperate the employees whose age is more than 35 and less than 35
+        List<Empolyee> el = Arrays.asList(new Empolyee("Govind", 24), new Empolyee("Doll", 23), new Empolyee("a", 49),
+                new Empolyee("Ram", 35), new Empolyee("c", 38), new Empolyee("Shayam", 19), new Empolyee("def", 99));
+        Map<Boolean, List<Empolyee>> elMp = el.stream().collect(Collectors.partitioningBy(e -> e.getAge() > 35));
+        List<Empolyee> age1 = elMp.get(true);
+        List<Empolyee> age2 = elMp.get(false);
+        System.out.println("Employee whose age is greater than 35 : ");
+        System.out.println(age1);
+        System.out.println();
+        System.out.println("Employee whose age is less than 35 : ");
+        System.out.println(age2);
     }
 
 }
