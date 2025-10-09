@@ -1,0 +1,8 @@
+1. final class
+    - Cannot be inherited or extended 
+    - Can implepents or extend other class 
+    - rest all fuctions are fimiliar to normal class
+
+// 2. final method
+
+ 
