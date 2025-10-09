@@ -3,7 +3,7 @@
     - Can implepents or extend other class 
     - rest all fuctions are fimiliar to normal class
 
-2. final method
+2. final  method
     - Cannot be Override in child class ( compilation error )
     - rest all function are similar  
 
