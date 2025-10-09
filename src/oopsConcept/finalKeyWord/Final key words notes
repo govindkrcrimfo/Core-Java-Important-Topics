@@ -7,4 +7,24 @@
     - Cannot be Override in child class ( compilation error )
     - rest all function are similar  
 
+3. final variable
+    - final variable must intialised once , cannot be modified later 
+    - unassigned (blank variable) final variable can be assing using contructor 
+        ex-
+    public class Employee {
+    // This is a blank final instance variable.
+    // It is declared but not initialized.
+    private final String employeeId;
+
+    // A constructor is used to initialize the blank final variable.
+    public Employee(String id) {
+        // Assign the value passed to the constructor.
+        // This is the ONLY time employeeId can be assigned a value.
+        this.employeeId = id;
+    }
+
+    public String getEmployeeId() {
+        return this.employeeId;
+    }
+
  
